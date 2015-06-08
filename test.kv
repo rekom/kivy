@@ -3,19 +3,24 @@ BoxLayout:
     padding: 20
     spacing: 10
     Button:
+        height: "40dp"
         text: "Bouton 1"
-        size_hint: 1, 0.5
-    Button:
-        text: "Bouton 2"
-        size_hint: 1, 0.25
-    Button:
-        text: "Bouton 3"
+        size_hint_y: 1, 0.5
+    Slider:
+        id: slider
+        max: 200
+        value: 140
+        on_value: slider.value = self.value
+    TextInput:
+        text: "Text Input, start typing here\nmultiline\nsupport"
+        background_color: .8, .8, 0, 1
         size_hint: 1, 0.25
     BoxLayout:
         orientation: "horizontal"
+        spacing: 10
         Button:
             text: "Bouton 4"
-            size_hint: 1, 1
+            size_hint: 0.75, 1
         BoxLayout:
             orientation: "vertical"
             Button:
