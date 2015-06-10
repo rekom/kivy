@@ -1,31 +1,56 @@
 BoxLayout:
-    orientation: "vertical"
-    padding: 20
+    padding: 10
+    spacing: 10
+    orientation: 'vertical'
+    Label:
+        text: "Jouer avec les verbes \nirréguliers par :"
+        color: 1,1,1,1 # <-----------
+        canvas.before:
+            Color:
+                rgba: 0.99, 0.65, 0.07, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+BoxLayout:
+    orientation: 'horizontal'
+    spacing: 10
+
+    Button:
+        text: "L'infinitif"
+        size_hint: 1, 1
+        background_color: 0.81, 0.27, 0.33, 1
+
+    Button:
+        text: "La traduction \nFrançaise"
+        size_hint: 1, 1
+Label:
+    height: "40dp"
+    text: "Combien de parties \nvoulez-vous jouer?"
+    color: 1,1,1,1 # <-----------
+    canvas.before:
+        Color:
+            rgba: 0.99, 0.65, 0.07, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+BoxLayout:
+    orientation: 'horizontal'
+    spacing: 2
+    Button:
+        text: "5"
+        size_hint: 1, 1
+    Button:
+        text: "10"
+        size_hint: 1, 1
+    Button:
+        text: "15"
+        size_hint: 1, 1
+    Button:
+        text: "20"
+        size_hint: 1, 1
+BoxLayout:
+    orientation: 'horizontal'
     spacing: 10
     Button:
-        height: "40dp"
-        text: "Bouton 1"
-        size_hint_y: 1, 0.5
-    Slider:
-        id: slider
-        max: 200
-        value: 140
-        on_value: slider.value = self.value
-    TextInput:
-        text: "Text Input, start typing here\nmultiline\nsupport"
-        background_color: .8, .8, 0, 1
-        size_hint: 1, 0.25
-    BoxLayout:
-        orientation: "horizontal"
-        spacing: 10
-        Button:
-            text: "Bouton 4"
-            size_hint: 0.75, 1
-        BoxLayout:
-            orientation: "vertical"
-            Button:
-                text: "Bouton 5"
-                size_hint: 0.5, 0.5
-            Button:
-                text: "Bouton 6"
-                size_hint: 0.5, 0.5
+        text: "Mode entrainement"
+        size_hint: 1, 1
